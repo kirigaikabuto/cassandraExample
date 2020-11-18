@@ -22,7 +22,7 @@ func main() {
 	}
 	var updateExample = &moviews.MovieUpdate{
 		Id:   1,
-		Name: example.Name,
+		Name: &example.Name,
 	}
 	fmt.Println(updateExample)
 	updatedData, err := cassandraStore.Update(updateExample)
