@@ -10,7 +10,7 @@ var tableCqls = []string{
 	`create table if not exists movies (
 		id int,
 		name text,
-		rating float,
+		rating int,
 		PRIMARY KEY (id)
 	);`,
 }
@@ -105,7 +105,7 @@ func (d *defaultMovieStore) List() ([]Movie, error) {
 	movies := []Movie{}
 	var id int64
 	var name string
-	var rating float64
+	var rating int64
 	for iter.Scan(&id, &name, &rating) {
 		movies = append(movies, Movie{
 			Id:     id,
