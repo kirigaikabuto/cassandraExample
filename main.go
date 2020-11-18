@@ -16,15 +16,26 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	example := &moviews.Movie{
-		Name:   "movie1",
-		Rating: 3,
+	s := "sdsdds"
+	var updateExample = &moviews.MovieUpdate{
+		Id:   1,
+		Name: &s,
 	}
-	newExample, err := cassandraStore.Create(example)
+	fmt.Println(updateExample)
+	updatedData, err := cassandraStore.Update(updateExample)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(newExample)
+	fmt.Println(updatedData)
+	//example := &moviews.Movie{
+	//	Name:   "movie3",
+	//	Rating: 12,
+	//}
+	//newExample, err := cassandraStore.Create(example)
+	//if err != nil {
+	//	log.Fatal(err)
+	//}
+	//fmt.Println(newExample)
 	data, err := cassandraStore.List()
 	if err != nil {
 		log.Fatal(err)

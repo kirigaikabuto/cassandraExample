@@ -3,6 +3,7 @@ package moviews
 import (
 	"errors"
 	"github.com/gocql/gocql"
+	"strings"
 	"time"
 )
 
@@ -116,8 +117,37 @@ func (d *defaultMovieStore) List() ([]Movie, error) {
 	return movies, nil
 }
 func (d *defaultMovieStore) Update(movie *MovieUpdate) (*Movie, error) {
-	return nil, nil
+	q := "update movies set"
+	var parts []string
+	var values []interface{}
+	if movie.Name != nil {
+		parts = append(parts, "name=?")
+		values = append(values, movie.Name)
+	}
+	if movie.Rating != nil {
+		parts = append(parts, "rating=?")
+		values = append(values, movie.Rating)
+	}
+	if len(parts) <= 0 {
+		return nil, errors.New("Nothing to update")
+	}
+	q = q + strings.Join(parts, " , ") + " WHERE id = $"
+	values = append(values, movie.Id)
+	err := d.cql.Query(q, values).Exec()
+	if err != nil {
+		return nil, err
+	}
+	movieUpdated, err := d.Get(movie.Id)
+	if err != nil {
+		return nil, err
+	}
+	return movieUpdated, nil
 }
 func (d *defaultMovieStore) Delete(id int64) error {
+	err := d.cql.Query("DELETE FROM movies WHERE id = ?", id).Exec()
+	if err != nil {
+		return err
+	}
 	return nil
+
 }
