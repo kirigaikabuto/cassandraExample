@@ -16,6 +16,8 @@ github.com/kirigaikabuto/cassandraExample/moviews v0.0.0-20201118165546-3058f981
 github.com/kirigaikabuto/cassandraExample/moviews v0.0.0-20201118165546-3058f981eef7/go.mod h1:c2Qlu2Tk3W6VxdtuoLF8M2MtQZUPE7kxALDjLlJ7RtU=
 github.com/kirigaikabuto/cassandraExample/moviews v0.0.0-20201118171249-f435127a1753 h1:UtsmnbHzOr7hjuPdJTQIby7cltVt/QoZFCoylBoCI2o=
 github.com/kirigaikabuto/cassandraExample/moviews v0.0.0-20201118171249-f435127a1753/go.mod h1:c2Qlu2Tk3W6VxdtuoLF8M2MtQZUPE7kxALDjLlJ7RtU=
+github.com/kirigaikabuto/cassandraExample/moviews v0.0.0-20201118173620-06086148ff57 h1:KFKdhe/EcQcwrfhvS6Ok3HPFx2peS0c72JYZK6gZ/FM=
+github.com/kirigaikabuto/cassandraExample/moviews v0.0.0-20201118173620-06086148ff57/go.mod h1:c2Qlu2Tk3W6VxdtuoLF8M2MtQZUPE7kxALDjLlJ7RtU=
 github.com/kr/pretty v0.1.0 h1:L/CwN0zerZDmRFUapSPitk6f+Q3+0za1rQkzVuMiMFI=
 github.com/kr/pretty v0.1.0/go.mod h1:dAy3ld7l9f0ibDNOQOHHMYYIIbhfbHSm3C4ZsoJORNo=
 github.com/kr/pty v1.1.1/go.mod h1:pFQYn66WHrOpPYNljwOMqo10TkYh1fy3cYio2l3bCsQ=

@@ -16,10 +16,13 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	s := "sdsdds"
+	example := &moviews.Movie{
+		Name:   "movie3123",
+		Rating: 12,
+	}
 	var updateExample = &moviews.MovieUpdate{
 		Id:   1,
-		Name: &s,
+		Name: example.Name,
 	}
 	fmt.Println(updateExample)
 	updatedData, err := cassandraStore.Update(updateExample)

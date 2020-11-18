@@ -122,11 +122,11 @@ func (d *defaultMovieStore) Update(movie *MovieUpdate) (*Movie, error) {
 	var values []interface{}
 	if movie.Name != nil {
 		parts = append(parts, "name=?")
-		values = append(values, movie.Name)
+		values = append(values, *movie.Name)
 	}
 	if movie.Rating != nil {
 		parts = append(parts, "rating=?")
-		values = append(values, movie.Rating)
+		values = append(values, *movie.Rating)
 	}
 	if len(parts) <= 0 {
 		return nil, errors.New("Nothing to update")
