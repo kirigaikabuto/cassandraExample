@@ -9,6 +9,8 @@ github.com/hailocab/go-hostpool v0.0.0-20160125115350-e80d13ce29ed h1:5upAirOpQc
 github.com/hailocab/go-hostpool v0.0.0-20160125115350-e80d13ce29ed/go.mod h1:tMWxXQ9wFIaZeTI9F+hmhFiGpFmhOHzyShyFUhRm0H4=
 github.com/kirigaikabuto/cassandraExample/moviews v0.0.0-20201118164357-a72b90da227d h1:xNPP7YbLF4pJrXcWwHhfgEMyjfaDe8yixRKStxF3wrs=
 github.com/kirigaikabuto/cassandraExample/moviews v0.0.0-20201118164357-a72b90da227d/go.mod h1:c2Qlu2Tk3W6VxdtuoLF8M2MtQZUPE7kxALDjLlJ7RtU=
+github.com/kirigaikabuto/cassandraExample/moviews v0.0.0-20201118164511-5f9081a216ba h1:wnDUtf9iq5w2/ClL6FV8jKA0WbqeEjhGKHxpYXlvEtQ=
+github.com/kirigaikabuto/cassandraExample/moviews v0.0.0-20201118164511-5f9081a216ba/go.mod h1:c2Qlu2Tk3W6VxdtuoLF8M2MtQZUPE7kxALDjLlJ7RtU=
 github.com/kr/pretty v0.1.0/go.mod h1:dAy3ld7l9f0ibDNOQOHHMYYIIbhfbHSm3C4ZsoJORNo=
 github.com/kr/pty v1.1.1/go.mod h1:pFQYn66WHrOpPYNljwOMqo10TkYh1fy3cYio2l3bCsQ=
 github.com/kr/text v0.1.0/go.mod h1:4Jbv+DJW3UT/LiOwJeYQe1efqtUx/iVham/4vfdArNI=
