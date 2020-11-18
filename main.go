@@ -9,7 +9,7 @@ import (
 func main() {
 	config := moviews.CassandraConfig{
 		Nodes:    []string{"localhost"},
-		Database: "cassandra_example",
+		Database: "keyspace_name",
 	}
 	cassandraStore,err := moviews.NewCassandraMovieStore(config)
 	if err != nil{

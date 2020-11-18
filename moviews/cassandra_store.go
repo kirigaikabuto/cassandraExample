@@ -68,10 +68,13 @@ func (d *defaultMovieStore) initRepository() error {
 
 func (d *defaultMovieStore) Create(movie *Movie) (*Movie, error) {
 	data, err := d.List()
-	if err != nil {
+	if err != nil && err.Error() == "No data" {
+		movie.Id = 1
+	} else if err != nil {
 		return nil, err
+	} else {
+		movie.Id = int64(len(data) + 1)
 	}
-	movie.Id = int64(len(data) + 1)
 	err = d.cql.Query("insert into movies (id,name,rating) values (?,?,?)",
 		movie.Id, movie.Name, movie.Rating).Exec()
 	if err != nil {
